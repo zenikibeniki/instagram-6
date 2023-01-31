@@ -71,3 +71,117 @@ main {
   width: 8em;
   z-index: 1;
 }
+.upload-bubble {
+  --dur: 3s;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2em;
+  height: 2em;
+  transform: translateX(-50%);
+  transform-origin: 50% 100%;
+}
+
+.upload-bubble:before {
+  background-color: var(--primary11);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.upload-check {
+  display: block;
+  margin: 0 auto 3em auto;
+  width: 8em;
+  height: 8em;
+}
+
+.upload-cloud-explode,
+.upload-cloud-left,
+.upload-cloud-middle,
+.upload-cloud-right {
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+}
+
+.upload-cloud-explode,
+.upload-cloud-middle {
+  border-radius: 50%;
+}
+.upload-cloud-explode {
+  display: none;
+  bottom: 0;
+  left: 50%;
+  width: 69em;
+  height: 69em;
+  transform: translate(-50%, 1em) scale(0);
+  transform-origin: 50% 100%;
+  z-index: 1;
+}
+.upload-cloud-left,
+.upload-cloud-middle,
+.upload-cloud-right {
+  bottom: 0;
+}
+
+.upload-cloud-left,
+.upload-cloud-right {
+  width: 6em;
+}
+
+.upload-cloud-left {
+  border-radius: 2.5em 0 0 2.5em;
+  right: 50%;
+  height: 5em;
+}
+
+.upload-cloud-middle {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  width: 13em;
+  height: 13em;
+  transform: translate(-50%, 0) scae(0.6);
+  transform-origin: 50% 100%;
+  z-index: 2;
+}
+.upload-cloud-right {
+  border-radius: 0 3em 3em 0;
+  left: 50%;
+  height: 6em;
+}
+
+.upload-feedback {
+  color: hsl(var(--hue), 10%, 5%);
+  margin-bottom: 4.5em;
+}
+
+.upload-feedback,
+.upload-feedback + .upload-button {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.upload-finish {
+  margin: auto;
+  padding: 1.5em;
+}
+
+.upload-progress {
+  opacity: 0;
+}
+
+.upload-progress {
+  font-size: 3em;
+  margin-bottom: 3rem;
+  min-height: 4.5rem;
+  transform: translateY(25%);
+}
+
+.upload--running .upload-cloud-left,
+.upload--running .upload-cloud-middle,
+.upload--running .upload-cloud-right {
+  transition: all 0.5s ease-in-out;
+}
