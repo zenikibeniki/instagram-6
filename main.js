@@ -4,11 +4,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 class FileUpload {
     bubbles = [];
-    isUploadng = false;
+    isUploading = false;
     progress = 0;
     timeout = null;
     uploadClass = 'upload--running';
-    doneClass = 'uload--done';
+    doneClass = 'upload--done';
 
     constructor(el) {
         this.el = document.querySelector(el);
